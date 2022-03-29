@@ -65,7 +65,7 @@
 input:focus, textarea:focus {
     border: none;
     outline: none;
-    background-color: transparent;
+    background-color: #040c18;
 }
 
 .contact__container button {

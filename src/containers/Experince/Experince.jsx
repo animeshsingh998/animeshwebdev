@@ -54,8 +54,7 @@ const Experince = () => {
               <SiSqlite size={27} />
               <h3>SQLlite</h3>
               <p>
-                SQLlite is a database that is used to handle user data in web
-                pages.
+                SQLlite is a database that is used to handle user data in Backend.
               </p>
             </article>
           </div>

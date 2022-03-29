@@ -15,7 +15,7 @@ const Experince = () => {
           <div className="experince__section-container__left">
             <h1 className="gradient__text">Experience</h1>
             <p>
-              I am FullStack Web-developer, I use ReactJS for front-end and Python Django for Back-end programming. For the Databases I use SQL and sometimes MongoDB. I am still a learner and I don't accept orders yet. All of my important skills are mentioned above:
+              I am FullStack Web-developer, I use ReactJS for front-end and Python Django for Back-end programming. For the Databases I use SQL and sometimes MongoDB. One of my friend "Ansh Rajput" helped me alot in my Journey. I am still a learner and I don't accept orders yet. All of my important skills are mentioned above:
             </p>
             <button type="button" className="btn-large btn-primary">
               Contact me

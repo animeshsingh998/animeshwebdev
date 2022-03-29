@@ -65,6 +65,7 @@
 input:focus, textarea:focus {
     border: none;
     outline: none;
+    background-color: transparent;
 }
 
 .contact__container button {

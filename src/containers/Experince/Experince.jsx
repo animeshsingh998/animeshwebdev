@@ -4,8 +4,9 @@ import { AiFillHtml5 } from 'react-icons/ai'
 import { FaCss3 } from "react-icons/fa";
 import { SiJavascript } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
-import { SiDjango } from "react-icons/si";
-import { SiSqlite } from "react-icons/si";
+import nextLogo from '../../../src/static/media/nextjs.svg'
+import { SiMongodb } from "react-icons/si";
+
 
 const Experince = () => {
   return (
@@ -15,7 +16,11 @@ const Experince = () => {
           <div className="experince__section-container__left">
             <h1 className="gradient__text">Experience</h1>
             <p>
-              I am FullStack Web-developer, I use ReactJS for front-end and Python Django for Back-end programming. For the Databases I use SQL and sometimes MongoDB. One of my friend "Ansh Rajput" helped me alot in my Journey. I am still a learner and I don't accept orders yet. All of my important skills are mentioned above:
+              I am FullStack Web-developer, I use ReactJS and NextJs for front-end programming and
+              ExpressJs/ NodeJs for Back-end programming. For the Databases I use
+             MongoDB and Mongoose. I can create any kind of website design.
+              All of my important skills are mentioned above:
+
             </p>
             <button type="button" className="btn-large btn-primary">
               Contact me
@@ -46,15 +51,15 @@ const Experince = () => {
               <p>ReactJS is a Library that is used in Front-End developing.</p>
             </article>
             <article className="experince__card">
-              <SiDjango size={27} color="green" />
-              <h3>Djnago</h3>
-              <p>Django is a python framework for Back-End programming.</p>
+              <img src={nextLogo} alt="NextJs" width="27px" height="27px"/>
+              <h3>NextJs</h3>
+              <p>NextJs is a framework built on top of ReactJs. Which is able to handle server side rendering.</p>
             </article>
             <article className="experince__card">
-              <SiSqlite size={27} />
-              <h3>SQLlite</h3>
+              <SiMongodb size={27}  color='green'/>
+              <h3>MongoDB</h3>
               <p>
-                SQLlite is a database that is used to handle user data in Backend.
+                MongoDb is a database that works on NoSql and is easy to use.
               </p>
             </article>
           </div>

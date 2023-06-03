@@ -11,7 +11,7 @@ import { SiMongodb } from "react-icons/si";
 const Experince = () => {
   return (
     <>
-      <section className="experince__section">
+      <section className="experince__section" id='experience'>
         <div className="experince__section-container" id="experince">
           <div className="experince__section-container__left">
             <h1 className="gradient__text">Experience</h1>

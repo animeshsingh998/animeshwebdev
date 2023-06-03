@@ -2,23 +2,17 @@ import React, { useState } from "react";
 import "./navbar.css";
 import { RiMenu3Line } from 'react-icons/ri'
 import { RiCloseLine } from 'react-icons/ri'
-import { Header } from '../../containers'
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
     <>
       <ul>
         <li>
-          <a href="#header">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#experince">Experience</a>
-        </li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
+          <Link to="/projects">Projects</Link>
         </li>
       </ul>
     </>
@@ -78,7 +72,7 @@ const Navbar = () => {
           )}
         </div>
         </div>
-        <Header />
+
       </nav>
     </>
   );

@@ -19,7 +19,7 @@ const Experince = () => {
               I am FullStack Web-developer, I use ReactJS and NextJs for front-end programming and
               ExpressJs/ NodeJs for Back-end programming. For the Databases I use
              MongoDB and Mongoose. I can create any kind of website design.
-              All of my important skills are mentioned above:
+              All of my important skills are mentioned here.
 
             </p>
             <button type="button" className="btn-large btn-primary">

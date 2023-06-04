@@ -1,39 +1,70 @@
-import React from "react";
-import "./contact.css";
+import { useState } from "react";
+import "./contact.css"
+import axios from "axios";
 
 const Contact = () => {
+  const [contactData, setContactData] = useState({firstName: "", lastName: "", userEmail: "", userMessage: ""});
+  const handleClick = (e) => {
+    setContactData({ ...contactData, [e.target.name]: e.target.value });
+  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const { data } = await axios.post(
+      "https://pandautilities.vercel.app/utils/sendmail",
+      { contactData }
+    );
+    if (data?.error) {
+      alert("We were unable to send the email, we will surely work on the problem.");
+    } else {
+      alert(data?.message);
+    }
+  }
   return (
     <>
-          <div className="contact__container">
-              <h2 className="gradient__text" id="contact">Contact Me</h2>
-        <form action="" method="post">
+      <div className="contact__container">
+        <h2 className="gradient__text" id="contact">
+          Contact Me
+        </h2>
+        <form onSubmit={handleSubmit}>
           <div className="contact__name">
             <input
               type="text"
-              name="first_name"
+              value={contactData.firstName}
+              required
+              name="firstName"
               id="first_name"
               placeholder="First Name"
+              onChange={handleClick}
             />
             <input
               type="text"
-              name="last_name"
+              value={contactData.lastName}
+              required
+              name="lastName"
               id="last_name"
               placeholder="Last Name"
+              onChange={handleClick}
             />
           </div>
           <div className="contact__rest">
             <input
               type="email"
-              name="user_email"
+              value={contactData.userEmail}
+              required
+              name="userEmail"
               id="user_email"
               placeholder="Email"
+              onChange={handleClick}
             />
             <textarea
-              name="user_message"
+              name="userMessage"
+              value={contactData.userMessage}
+              required
               id="user_message"
               cols="30"
               rows="10"
               placeholder="Message"
+              onChange={handleClick}
             />
             <button type="submit" className="btn btn-primary">
               Submit

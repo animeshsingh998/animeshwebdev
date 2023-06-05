@@ -4,17 +4,20 @@ import axios from "axios";
 
 const Contact = () => {
   const [contactData, setContactData] = useState({firstName: "", lastName: "", userEmail: "", userMessage: ""});
+  const [disabled, setDisabled] = useState(false);
   const handleClick = (e) => {
     setContactData({ ...contactData, [e.target.name]: e.target.value });
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setDisabled(true);
     const { data } = await axios.post(
       "https://pandautilities.vercel.app/utils/sendmail",
       { contactData }
-    );
-    if (data?.error) {
-      alert("We were unable to send the email, we will surely work on the problem.");
+      );
+      if (data?.error) {
+        alert("We were unable to send the email, we will surely work on the problem.");
+        setDisabled(false);
     } else {
       alert(data?.message);
     }
@@ -66,7 +69,7 @@ const Contact = () => {
               placeholder="Message"
               onChange={handleClick}
             />
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary" disabled={disabled}>
               Submit
             </button>
           </div>

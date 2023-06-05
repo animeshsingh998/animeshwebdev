@@ -11,8 +11,8 @@ const Navbar = () => {
       <nav className=" gradient__back">
         <div className="nav__container">
           <div className="nav__logo">
-            <h2>Port</h2>
-            <span>folio</span>
+            <h2>Animesh</h2>
+            <span>.webdev</span>
           </div>
           <div className="nav__right">
             <div className="nav__links">

@@ -22,9 +22,6 @@ const Experince = () => {
               All of my important skills are mentioned here.
 
             </p>
-            <button type="button" className="btn-large btn-primary">
-              Contact me
-            </button>
           </div>
           <div className="experince__section-container__right">
             <article className="experince__card">

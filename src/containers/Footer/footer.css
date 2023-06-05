@@ -18,12 +18,12 @@
 }
 
 .footer__icons a {
-    color: var(--color-orange);
+    color: white;
     transition: all 0.3s ease-in-out;
 }
 
 .footer__icons a:hover {
-    color: white;
+    color: red;
 }
 
 .footer__Container-down {

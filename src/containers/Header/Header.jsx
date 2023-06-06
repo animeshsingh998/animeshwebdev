@@ -1,6 +1,7 @@
-import React from 'react'
-import './header.css'
-import AI from '../../assets/ai.png'
+import React from 'react';
+import './header.css';
+import AI from '../../assets/ai.png';
+import { motion } from 'framer-motion';
 
 const Header = () => {
   return (
@@ -9,11 +10,11 @@ const Header = () => {
         <div className="header__container" id="header">
           <div className="header__left-side">
             <h5>Hello I'm</h5>
-            <h1 className="gradient__text">Animesh Singh</h1>
+            <motion.h1 className="gradient__text" animate={{x: [0, 10, 0]}} transition={{repeat: Infinity, duration: 4}}>Animesh Singh</motion.h1>
             <p>
               I live in Ahmedabad, Gujarat and I'm currently doing B.Tech in
-              Computer Engineering. I am a FullStack Webdeveloper but i also
-              have interest in other fields like Game Developement with Unity.
+              Computer Engineering. I am a FullStack Webdeveloper but I also
+              have interest in other fields like Game Developement with Unity and software development using Python language.
             </p>
             <div className="header__btns">
               <a href='/Animesh_cv.pdf' download={true} className="btn-large btn-outline">Download CV</a>
@@ -22,9 +23,9 @@ const Header = () => {
               </a>
             </div>
           </div>
-          <div className="header__right-side">
+          <motion.div className="header__right-side" animate={{y: [0, -30, 0]}} transition={{repeat: Infinity, duration: 4}}>
             <img src={AI} alt="ai" />
-          </div>
+          </motion.div>
         </div>
       </header>
     </>

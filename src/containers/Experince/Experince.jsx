@@ -7,14 +7,13 @@ import { FaReact } from "react-icons/fa";
 import nextLogo from '../../../src/static/media/nextjs.svg'
 import { SiMongodb } from "react-icons/si";
 
-
 const Experince = () => {
   return (
     <>
       <section className="experince__section" id='experience'>
         <div className="experince__section-container" id="experince">
           <div className="experince__section-container__left">
-            <h1 className="gradient__text">Experience</h1>
+            <h1 className="gradient__text">Tech-Stack</h1>
             <p>
               I am FullStack Web-developer, I use ReactJS and NextJs for front-end programming and
               ExpressJs/ NodeJs for Back-end programming. For the Databases I use
@@ -24,7 +23,7 @@ const Experince = () => {
             </p>
           </div>
           <div className="experince__section-container__right">
-            <article className="experince__card">
+            <article className="experince__card" >
               <AiFillHtml5 size={27} color="red" />
               <h3>HTML5</h3>
               <p>The HTML5 is used to build basic structure for web pages.</p>

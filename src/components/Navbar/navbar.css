@@ -1,7 +1,5 @@
 nav {
     width: 100vw;
-    /* height: 4.5rem; */
-    /* background-color: var(--color-bg); */
 }
 
 .nav__container {
@@ -66,7 +64,7 @@ nav {
 }
 
 .nav__menu-links {
-    background-color: var(--color-footer);
+    background-color: whitesmoke;
     border-radius: 1rem;
     padding: 1rem 2rem;
     position: absolute;
@@ -75,13 +73,24 @@ nav {
     transition: all 0.2s ease-in-out;
     line-height: 2rem;
 }
+/* .nav__menu-links {
+    background-color: whitesmoke;
+    padding: 1rem 2rem;
+    position: absolute;
+    right: 1px;
+    top: 4rem;
+    transition: all 0.2s ease-in-out;
+    line-height: 2rem;
+    width: 200px;
+    height: calc(100vh - 4rem);
+} */
 
 .nav__menu-links ul li{
     text-align: center;
 }
 
 .nav__menu-links ul li a{
-    color: white;
+    color: black;
 }
 
 @media only screen and (max-width: 990px) {

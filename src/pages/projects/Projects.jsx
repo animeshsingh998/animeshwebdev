@@ -1,11 +1,18 @@
-import './projects.css';
+import "./projects.css";
 import { projectData } from "../../assets/projectsData";
-import ProjectBox from '../../components/projectBox/ProjectBox';
+import ProjectBox from "../../components/projectBox/ProjectBox";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
     <div className="projectPage">
-      <h1 className="projectHeading gradient__text">PROJECTS</h1>
+      <motion.h1
+        className="projectHeading gradient__text"
+        animate={{ x: [0, 10, 0] }}
+        transition={{ repeat: Infinity, duration: 4 }}
+      >
+        PROJECTS
+      </motion.h1>
       <div className="projects">
         {projectData &&
           projectData.map((project, idx) => (
@@ -14,6 +21,6 @@ const Projects = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Projects
+export default Projects;

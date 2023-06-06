@@ -1,27 +1,39 @@
 import { useState } from "react";
-import "./contact.css"
+import "./contact.css";
 import axios from "axios";
 
 const Contact = () => {
-  const [contactData, setContactData] = useState({firstName: "", lastName: "", userEmail: "", userMessage: ""});
+  const [contactData, setContactData] = useState({
+    firstName: "",
+    lastName: "",
+    userEmail: "",
+    userMessage: "",
+  });
   const [disabled, setDisabled] = useState(false);
+  const [emailReceived, setEmailReceived] = useState(false);
+  const [loading, setLoading] = useState(false);
   const handleClick = (e) => {
     setContactData({ ...contactData, [e.target.name]: e.target.value });
-  }
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     setDisabled(true);
     const { data } = await axios.post(
       "https://pandautilities.vercel.app/utils/sendmail",
       { contactData }
+    );
+    if (data?.error) {
+      alert(
+        "We were unable to send the email, we will surely work on the problem."
       );
-      if (data?.error) {
-        alert("We were unable to send the email, we will surely work on the problem.");
-        setDisabled(false);
+      setDisabled(false);
+      setLoading(false);
     } else {
-      alert(data?.message);
+      setLoading(false);
+      setEmailReceived(true);
     }
-  }
+  };
   return (
     <>
       <div className="contact__container">
@@ -59,6 +71,9 @@ const Contact = () => {
               placeholder="Email"
               onChange={handleClick}
             />
+            <label htmlFor="user_email" className="emailLabel">
+              We will send response at the provided email.
+            </label>
             <textarea
               name="userMessage"
               value={contactData.userMessage}
@@ -69,8 +84,17 @@ const Contact = () => {
               placeholder="Message"
               onChange={handleClick}
             />
-            <button type="submit" className="btn btn-primary" disabled={disabled}>
-              Submit
+            {emailReceived && (
+              <h4 className="emailReceived">
+                We have received your message and we will reply to you shortly.
+              </h4>
+            )}
+            <button
+              type="submit"
+              className="btn btn-primary cntBtn"
+              disabled={disabled}
+            >
+              {loading ? ("loading..") : "Submit"}
             </button>
           </div>
         </form>

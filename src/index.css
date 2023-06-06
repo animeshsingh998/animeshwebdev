@@ -20,9 +20,30 @@
     background: radial-gradient(circle at 10% 30%, #002853, #02244a, #042141, #061d39, #071930, #081628, #071120, #040c18);
 }
 
-.gradient__text{
+.gradient__text {
     background: var(--gradient-text);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.notFound{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+}
+
+.notFound h1{
+    font-family: var(--font-family);   
+}
+
+.notFound a{
+    font-size: 25px;
+    color: white;
+    font-family: var(--font-family);
+    text-decoration: underline;
 }

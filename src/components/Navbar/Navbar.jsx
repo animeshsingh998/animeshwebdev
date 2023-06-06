@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./navbar.css";
-import { RiMenu3Line } from 'react-icons/ri'
-import { RiCloseLine } from 'react-icons/ri'
+import { RiMenu3Line } from "react-icons/ri";
+import { RiCloseLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -11,11 +11,19 @@ const Navbar = () => {
     <>
       <nav className=" gradient__back">
         <div className="nav__container">
-          <motion.div className="nav__logo" animate={{x: [-200, 0]}} transition={{duration: 2}}>
+          <motion.div
+            className="nav__logo"
+            animate={{ x: [-200, 0] }}
+            transition={{ duration: 2 }}
+          >
             <h2>Animesh</h2>
             <span>.webdev</span>
           </motion.div>
-          <motion.div className="nav__right" animate={{x: [200, 0]}} transition={{duration: 2}}>
+          <motion.div
+            className="nav__right"
+            animate={{ x: [200, 0] }}
+            transition={{ duration: 2 }}
+          >
             <div className="nav__links">
               <ul>
                 <li>
@@ -40,7 +48,6 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-
           </motion.div>
           <div className="nav__menu-container">
             {toggleMenu ? (

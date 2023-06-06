@@ -16,7 +16,7 @@ const Projects = () => {
       <div className="projects">
         {projectData &&
           projectData.map((project, idx) => (
-            <ProjectBox key={idx} project={project} />
+            <ProjectBox key={idx} project={project} totalLength={projectData.length} idx={idx} />
           ))}
       </div>
     </div>

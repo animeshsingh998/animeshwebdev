@@ -1,9 +1,10 @@
 import "./projectBox.css";
 import { GoLinkExternal } from "react-icons/go";
+import { motion } from 'framer-motion';
 
-const ProjectBox = ({ project }) => {
+const ProjectBox = ({ project, idx, totalLength }) => {
   return (
-    <div className="projectBox">
+    <motion.div className="projectBox" animate={{x: [-200, 0]}} transition={{duration: 2}}>
       <div className="pbImgContainer">
         <img src={project.image} alt={project.name} />
       </div>
@@ -17,8 +18,8 @@ const ProjectBox = ({ project }) => {
           View Demo <GoLinkExternal />
         </a>
       </div>
-      <div className="linee"></div>
-    </div>
+      {(idx === totalLength - 1) || <div className="linee"></div>}
+    </motion.div>
   );
 };
 

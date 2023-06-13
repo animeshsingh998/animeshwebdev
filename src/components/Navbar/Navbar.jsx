@@ -16,8 +16,8 @@ const Navbar = () => {
             animate={{ x: [-200, 0] }}
             transition={{ duration: 2 }}
           >
-            <h2>Animesh</h2>
-            <span>.webdev</span>
+            <h2>Ani</h2>
+            <span>mesh</span>
           </motion.div>
           <motion.div
             className="nav__right"

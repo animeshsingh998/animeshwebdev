@@ -24,7 +24,7 @@ const Header = () => {
             </div>
           </div>
           <motion.div className="header__right-side" animate={{y: [0, -30, 0]}} transition={{repeat: Infinity, duration: 4}}>
-            <img src={AI} alt="ai" />
+            <img src={AI} alt="headerImage"/>
           </motion.div>
         </div>
       </header>

@@ -30,6 +30,7 @@
 
 .experince__section-container__left p {
     margin: 0 3rem 0 0;
+    text-align: justify !important;
 }
 
 .experince__section-container__left button {
@@ -51,12 +52,16 @@
     animation: cardAni 2s;
 }
 
+.experince__card p{
+    text-align: justify;
+}
+
 @keyframes cardAni {
-    from{
+    from {
         transform: translateX(500px);
     }
 
-    to{
+    to {
         transform: translateX(0);
     }
 }
@@ -133,6 +138,10 @@
     .experince__section-container {
         display: flex;
         flex-direction: column;
+    }
+
+    .experince__section-container__left p {
+        font-size: 17px;
     }
 
     .experince__section-container__left {

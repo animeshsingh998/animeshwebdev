@@ -58,7 +58,7 @@ const Experince = () => {
               <SiMongodb size={27} color="green" />
               <h3>MongoDB</h3>
               <p>
-                MongoDb is a database that works on NoSql and is easy to use.
+                MongoDB is a database framework that works on NoSql and is free and easy to use.
               </p>
             </article>
           </div>

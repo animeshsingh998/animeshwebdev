@@ -28,6 +28,7 @@
     margin: 2rem 0;
     color: var(--color-text);
     font-size: 1rem;
+    text-align: justify !important;
 }
 
 .header__btns {

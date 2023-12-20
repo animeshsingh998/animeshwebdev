@@ -52,9 +52,6 @@
     animation: cardAni 2s;
 }
 
-.experince__card p{
-    text-align: justify;
-}
 
 @keyframes cardAni {
     from {
